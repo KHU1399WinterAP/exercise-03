@@ -18,10 +18,11 @@ public class MainFrame extends JFrame {
 		
 		pack();
 		setLocationRelativeTo(null);
-
-//		initTable();
-
-//		initListeners();
+		
+		initListeners();
+	}
+	
+	private void initListeners() {
 		table.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -39,13 +40,6 @@ public class MainFrame extends JFrame {
 				JOptionPane.showMessageDialog(null, city, "City", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
-	}
-	
-	private void initTable() {
-		var model = new DefaultTableModel();
-		model.addRow(new Object[]{"Tehran"});
-		
-		table.setModel(model);
 	}
 	
 	private void createUIComponents() {
